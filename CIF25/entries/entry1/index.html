@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dayna's Spinning iPod</title>
+  <link rel="stylesheet" href="entry1.css" />
+  <link rel="icon" type="image/x-icon" href="imgs/favicon.ico" />
+
+<style>
+@font-face {
+  font-family: "PangramRounded";
+  src: url("pangramrounded/PPPangramSansRounded-Bold.otf") format("opentype");
+  font-weight: Bold;
+  font-style: normal;
+}
+
+div, h1, p, h2 {
+  font-family: "PangramRounded", sans-serif;
+}
+</style>
+
+</head>
+<body>
+
+ 
+  <div class="goback">
+  <a href="../mainpage.html">go back</a>
+</div>
+
+
+ <!-- links to my spotify playl -->
+  <div class="artists">
+    <a href="https://open.spotify.com/playlist/6UEmgWpKByOeLmiO4Jsxek?si=4f538bb27ac7438b&pt=ca555fc329f52ac84eb53240931c5d8b" target="_blank">mix 3</a> (included artists: Kayne, Don Toliver),
+    <a href="https://open.spotify.com/playlist/6pCNlAhEB4EKWSppmUR5VD?si=91fe427a577a4d38&pt=0b121463b934cb48be1a126763d20fd9" target="_blank">H</a> (included artists: Ariana Grande, Rose, Rihanna),
+    <a href="https://open.spotify.com/playlist/3reG3RiIsL3OI8ztaxRIVp?si=f27222c547f240d9" target="_blank">2024</a> (included artists: Frank Ocean, Clairo, Cage The Elephant),
+    <a href="https://open.spotify.com/playlist/4nYHg4xYXLgAXF5UCtq0Q1?si=someID" target="_blank">slowed</a> (included artists: Adore, Suki Waterhouse, Lana Del Rey, etc.)
+  </div>
+
+  <!-- iPod + Button Container -->
+  <div class="main-container">
+    <button id="heartButton" class="button">I Like</button>
+    <img src="imgs/ipod.jpg" alt="iPod" class="ipod" />
+  </div>
+
+  <!-- Hearts-->
+  <script>
+    const ipod = document.querySelector('.ipod');
+    let isSpinning = false;
+    ipod.addEventListener('click', () => {
+      isSpinning = !isSpinning;
+      ipod.style.animationPlayState = isSpinning ? 'running' : 'paused';
+    });
+
+    const button = document.getElementById("heartButton");
+    button.addEventListener("click", () => {
+      for (let i = 0; i < 5; i++) {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.textContent = "💖";
+
+        const rect = button.getBoundingClientRect();
+        heart.style.left = rect.left + rect.width / 2 + (Math.random() * 40 - 20) + "px";
+        heart.style.top = rect.top + window.scrollY - 20 + "px";
+
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 2000);
+      }
+    });
+  </script>
+
+</body>
+</html>

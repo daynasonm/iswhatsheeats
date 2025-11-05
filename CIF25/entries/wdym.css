@@ -1,0 +1,46 @@
+body {
+  font-family: "Pangram Rounded", sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.goback {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight: bold;
+  font-size:16px;
+}
+
+.goback a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.goback a:hover {
+  color: #0073E6;
+}
+
+.left-aligned {
+  display: flex;
+  margin-top: 50vh;
+  margin-left: 10vw;
+  margin-right: 30vw;
+  text-align: left;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.click-link {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.click-link:hover {
+  color: #0073E6;
+}

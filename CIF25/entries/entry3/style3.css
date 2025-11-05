@@ -1,0 +1,170 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.wrap {
+  width: min(900px, 92vw);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.panel {
+  height: clamp(520px, 85vh, 1200px); 
+  overflow-y: auto;   /* vertical scroll */
+  overflow-x: hidden; /* no horizontal scroll */
+  padding: 0 8px 8px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.panel h3 {
+  position: sticky;       
+  top: 0;
+  margin: 0;
+  padding: 10px 4px;
+  text-align: center;
+  background: #fff;        
+}
+
+/* YAY title */
+.panel:nth-of-type(1) h3 {
+  font-family:"PangramRounded",sans-serif;
+  color: #000000; 
+}
+
+.panel:nth-of-type(1) h3:hover {
+  color: rgb(0, 254, 0);
+  transform: scale(1.1);
+}
+
+/* NAY titleee */
+.panel:nth-of-type(2) h3 {
+  font-family:"PangramRounded",sans-serif;
+  color: #000000; 
+}
+
+.panel:nth-of-type(2) h3:hover {
+  color: rgb(254, 0, 0);
+  transform: scale(1.1);
+}
+
+/* title size */
+.panel h3{
+  font-size: clamp(40px, 6vw, 64px);    
+  font-weight: 900;
+}
+/* default font */
+.panel ul li {
+  font-family: "Times New Roman", serif;
+  color: #000;
+  font-size: clamp(22px, 3vw, 36px);
+  line-height: 1.45;
+  margin: 6px 0;
+  transition: all 0.3s ease;
+}
+
+/* zoom in for da words */
+.panel ul li:hover {
+  transform: scale(1.2);
+}
+
+.panel ul {
+  list-style: none;    
+  margin: 0;
+  padding: 8px 0 4px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.panel ul li {
+  font-family:"PangramRounded",sans-serif;
+  color: black;
+  font-size: clamp(22px, 3vw, 36px);
+  margin: 6px 0;
+  transition: all 0.2s ease;
+}
+
+.panel ul li:hover{
+  font-family:"PangramRounded",sans-serif;
+  color: rgb(255, 0, 0);
+  font-size: clamp(22px, 3vw, 36px);
+  margin: 6px 0;
+  transition: all 0.2s ease;
+}
+
+/* Hover fonts for YAY list */
+.panel:nth-of-type(1) ul li:nth-child(1):hover  { font-family: "Comic Sans MS", cursive; color: #ff5e00; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(2):hover  { font-family: "Spectral", serif; color: #ffad15; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(3):hover  { font-family: "VT323", monospace; color: #27ae60; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(4):hover  { font-family: "Alata", sans-serif; color: #8e44ad; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(5):hover  { font-family: "Anton", sans-serif; color: #009926; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(6):hover  { font-family: "Ramabhadra", sans-serif; color: #ffbb00; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(7):hover  { font-family: "Urbanist", sans-serif; color: #16a085; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(8):hover  { font-family: "Nunito", sans-serif; color: #ff0000; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(9):hover  { font-family: "Pacifico", cursive; color: #6198ff; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(10):hover { font-family: "DM Serif Text", serif; color: #ffaccc; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(11):hover { font-family: "DM Mono", monospace; color: #818859; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(12):hover { font-family: Arial, sans-serif; color: #ff00e6; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(13):hover { font-family: "Unbounded", sans-serif; color: #1abc9c; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(14):hover { font-family: "Alfa Slab One", serif; color: #f09000; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(15):hover { font-family: "Amiri", serif; color: #4655d5; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(16):hover { font-family: "Pangolin", cursive; color: #e74c3c; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(17):hover { font-family: "Volkhov", serif; color: #6a3914; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(18):hover { font-family: "Playball", cursive; color: #4231ff; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(19):hover { font-family: "Arsenal", sans-serif; color: #00d9ff; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(20):hover { font-family: "Alex Brush", cursive; color: #9c5300; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(21):hover { font-family: "Antonio", sans-serif; color: #00c0b0; transform: scale(1.1); }
+.panel:nth-of-type(1) ul li:nth-child(22):hover { font-family: "Berkshire Swash", cursive; color: #b90050; transform: scale(1.1); }
+
+/* when clicking the words */
+.panel h3 a { color: inherit; text-decoration: none; display: inline-block; }
+
+/* modal */
+.modal{
+  position: fixed; inset: 0;
+  display: none;
+  justify-content: center; align-items: center;
+  background: rgba(0,0,0,.45);
+  z-index: 999;
+}
+.modal:target{ display: flex; }
+
+.modal img{
+  max-width: min(90vw, 520px);
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.35);
+}
+
+/* click to get rid of stitch img */
+.modal .close{ position: absolute; inset: 0; }
+
+
+.goback {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.goback a {
+  color: #A4A4A4;
+  text-decoration: none; 
+}
+
+.goback a:hover {
+  color: #0073E6; 
+  text-decoration: none; 
+}
+
+.goback a:active {
+  color: #A4A4A4;
+
+}

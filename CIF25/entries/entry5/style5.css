@@ -1,0 +1,143 @@
+.wrapper {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    flex-direction: row;
+
+}
+
+body{
+    background: linear-gradient(
+    180deg, #ffffff 0%, 
+    #ffffff 18%,
+    #e9f5fb 36%,
+    #a8d8e9 45%,
+    #68bcd8 55%,
+    #9ad1a5 65%,
+    #dbe97a 78%,
+    #E0EF5C 85%,
+    #ff8800 100%);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  color: #A4A4A4;
+  -webkit-text-stroke-width: 1px;
+  font-family: "PPPangramSansRounded", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  -webkit-text-stroke: 1px #566B2B;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+h1 a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-text-stroke: 1px #566B2B;
+}
+
+h1 a:hover {
+  color: #F70;;
+}
+
+.top-links {
+  position: absolute;
+  top: 75px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.top-links a {
+  font-size: 30px;
+  color: #A4A4A4;
+  text-decoration: none; /* removes underline */
+  font-family: "PangramRounded", sans-serif;
+  font-weight: 600;
+  -webkit-text-stroke: 1px #566B2B;
+}
+
+.top-links a:hover {
+  color: #F70;
+}
+
+.goback {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.goback a {
+  color: #A4A4A4;
+  text-decoration: none; 
+}
+
+.goback a:hover {
+  color: #0073E6; 
+  text-decoration: none; 
+}
+
+.goback a:active {
+  color: #A4A4A4;
+
+}
+
+.intro {
+  text-align: center;
+  margin-top: 350px;
+}
+
+.intro p {
+  font-size: 24px;
+  font-weight: 600;
+  color: #A4A4A4;
+  -webkit-text-stroke: 1px #566B2B;
+  line-height: 1.5;
+}
+
+.stars {
+  margin-top: 20px;
+  font-size: 80px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

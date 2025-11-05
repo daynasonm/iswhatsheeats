@@ -1,0 +1,173 @@
+@font-face {
+  font-family: 'PangramRounded';
+  src: url("pangramrounded/PPPangramSansRounded-Bold.otf") format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'PangramRounded', sans-serif;
+  background-color: white;
+  color: #A4A4A4;
+}
+
+.main {
+  display: flex;
+  height: 90vh;
+  flex-wrap: wrap;
+}
+
+.left {
+  background-color: black;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.left img {
+  width: 60%;
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+
+.left h2 {
+  font-size: 100px;
+  color: gray;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary {
+  flex: 1;
+  background-color: #ccff33;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summary p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #A4A4A4;
+}
+
+.summary h2 {
+  text-align: center;
+  font-size: 100px;
+  color: #A4A4A4;
+}
+
+.rating {
+  flex: 1;
+  background-color: purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.rating h2 {
+  font-size: 100px;
+  color: #A4A4A4;
+}
+
+.footer {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; 
+  border-top: 4px solid #ccc;
+}
+
+.footer-link {
+  font-size: 16px;
+  color: #A4A4A4;
+  text-decoration: none;
+  border: 4px solid #ccc;
+  border-radius: 25px;
+  padding: 10px 25px;
+}
+
+.center-button {
+  margin: 0 auto;
+}
+
+.footer-link.left-button {
+  margin-left: 60px;
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left, .right {
+    flex: none;
+    width: 100%;
+  }
+
+  .left img {
+    width: 80%;
+    max-width: 300px;
+    margin-top: 24px;
+  }
+
+  .left h2,
+  .summary h2,
+  .rating h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+  .summary p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .stars {
+    font-size: 36px;
+  }
+
+  .stars {
+    padding: 10px;
+  }
+
+  .footer {
+    flex-direction: column;
+    height: auto; 
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .footer-link {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .footer-link.left-button {
+    margin-left: 0;
+  }
+}
+
