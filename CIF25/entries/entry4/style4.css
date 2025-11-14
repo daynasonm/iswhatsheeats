@@ -1,47 +1,108 @@
+.goback {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
 
-h1 {
-  font-family: 'Times New Roman', serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 80pt; 
+.goback a {
+  color: #A4A4A4;
+  text-decoration: none; 
+}
+
+.goback a:hover {
+  color: #0073E6; 
+  text-decoration: none; 
+}
+
+.goback a:active {
+  color: #A4A4A4;
+
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.next {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.next a {
+  color: #A4A4A4;
+  text-decoration: none; 
+}
+
+.next a:hover {
+  color: #0073E6; 
+  text-decoration: none; 
+}
+
+.next a:active {
+  color: #A4A4A4;
 }
 
 
-h2 {
-    font-family: "ekamai", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 50pt;
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left, .right {
+    flex: none;
+    width: 100%;
+  }
+
+  .left img {
+    width: 80%;
+    max-width: 300px;
+    margin-top: 24px;
+  }
+
+  .left h2,
+  .summary h2,
+  .rating h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px; 
 }
 
-body {
-  background: rgb(255, 255, 255)
+  .summary p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .stars {
+    font-size: 36px;
+  }
+
+  .stars {
+    padding: 10px;
+  }
+
+  .footer {
+    flex-direction: column;
+    height: auto; 
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .footer-link {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .footer-link.left-button {
+    margin-left: 0;
+  }
 }
-
-/* hover */
-/* unvisited link  */
-
-
-/* visited link */
-p. a:visited {
-  color: rgb(255, 0, 187);
-}
-
-/* mouse over link */
-p. a:hover {
-  color: rgb(105, 105, 255);
-}
-
-
-/* selected link */
-p. a:active {
-  color: yellow;
-}
-
-p.ex1 {
-  padding-top: 25px;
-}
-
-.wait 
-{cursor: wait;}
 

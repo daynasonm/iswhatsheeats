@@ -15,26 +15,30 @@ body {
 
 .goback {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 25px;
+  left: 20px;
   font-weight: bold;
-}
-
-.goback a {
-  text-decoration: none;
-  color: gray;
   font-size: 18px;
 }
 
+.goback a {
+  color: #A4A4A4;
+  text-decoration: none; 
+}
+
 .goback a:hover {
-  color: #1a56db;
-  text-decoration: none;
-  font-weight: bold;
+  color: #0073E6; 
+  text-decoration: none; 
+}
+
+.goback a:active {
+  color: #A4A4A4;
+
 }
 
 .mov {
   position: absolute;
-  top: -20px;
+  top: 30px;
   left: 20px;
   font-size: 350px;
   font-weight: bold;

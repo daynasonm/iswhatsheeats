@@ -1,0 +1,294 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: black;
+  color: white;
+  font-family: "PangramRounded", sans-serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  font-family: "PangramRounded", sans-serif;
+  position: relative;
+}
+
+.goback {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 1000;
+}
+
+.goback a {
+  color: #A4A4A4;
+  text-decoration: none; 
+}
+
+.goback a:hover {
+  color: #0073E6; 
+  text-decoration: none; 
+}
+
+.goback a:active {
+  color: #A4A4A4;
+
+}
+
+.candyemoji {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 48px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.candyemoji:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.top-bar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+a:hover {
+  color: white;
+}
+
+.title {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 48rem;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.image-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.image-container img {
+  max-width: 60%;
+  height: auto;
+  object-fit: contain;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 16px;
+  color: white;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.title-toggle {
+  margin-top: 0;
+}
+
+.title {
+  font-size: 60px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.3s ease;
+  font-family: PangramRounded, sans-serif;
+}
+
+.title.formula {
+  display: none;
+}
+
+.step-toggle {
+  display: none;
+}
+
+.toggle-checkbox:checked ~ .title-toggle .sugar {
+  display: none;
+}
+.toggle-checkbox:checked ~ .title-toggle .formula {
+  display: inline;
+}
+
+.title.formula sub {
+  font-size: 20px;
+  vertical-align: sub;
+}
+
+.text-block {
+  max-width: 400pt;  
+  font-size: 14pt;
+  line-height: 18pt;
+  font-weight: bold;
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  color: white;
+}
+
+.text1 {
+  display: block;  
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  max-width: 700px;
+  text-align: left;
+  font-size: 20pt;
+  line-height: 25pt;
+  font-weight: bold;
+}
+
+#step1:checked ~ .text2 {
+  display: block;
+  position: absolute;
+  top: 160pt;
+  right: 40pt;
+  font-size: 40pt;
+  line-height: 50pt;
+  max-width: 610pt;
+  text-align: right;
+}
+
+#step2:checked ~ .text3 {
+  display: block;
+  bottom: 135pt;   
+  left: 350pt;          
+  font-size: 25pt;
+  line-height: 30pt;
+  max-width: 250pt;
+  position: absolute;
+  text-align: left;
+}
+
+#step3:checked ~ .text4 {
+  display: block;
+  position: absolute;
+  bottom: 80pt;
+  right: 330pt;
+  font-size: 12pt;
+  line-height: 16pt;
+  max-width: 140pt;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  body, html {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .page {
+    display: block;
+    padding: 20pt;
+    box-sizing: border-box;
+  }
+
+  .goback {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 20pt;
+    font-size: 14pt;
+    z-index: 1000;
+  }
+
+  .text-block {
+    position: static !important;
+    display: block !important;
+    margin-bottom: 30pt;
+    transform: none !important;
+    max-width: 100%;
+    text-align: left !important;
+    font-size: calc(14pt * 0.5); /* shrink by approx 50% */
+    line-height: calc(18pt * 0.5);
+  }
+
+  .text1 {
+    font-size: 12pt;
+    line-height: 16pt;
+  }
+
+  #step1:checked ~ .text2 {
+    font-size: 18pt;
+    line-height: 22pt;
+    text-align: right;
+    margin-bottom: 30pt;
+  }
+
+  #step2:checked ~ .text3 {
+    font-size: 16pt;
+    line-height: 20pt;
+    text-align: left;
+    margin-bottom: 30pt;
+  }
+
+  #step3:checked ~ .text4 {
+    font-size: 10pt;
+    line-height: 14pt;
+    text-align: right;
+    margin-bottom: 30pt;
+  }
+
+  .bottom-left {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    font-size: 12pt;
+    margin-top: 20pt;
+  }
+
+  .bottom-right {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 20pt;
+    text-align: right;
+  }
+
+  .bottom-right iframe {
+    width: 100%;
+    height: auto;
+    max-height: 160pt;
+  }
+}
