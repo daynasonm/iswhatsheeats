@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "PangramRounded";
+  src: url("pangramrounded/PPPangramSansRounded-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #CDE6FF;
+  font-family: "PangramRounded", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  position: relative;
+  padding: 24px 32px;
+}
+
+.goback {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.goback a {
+  color: #A4A4A4;
+  text-decoration: none; 
+}
+
+.goback a:hover {
+  color: #0073E6; 
+  text-decoration: none; 
+}
+
+.goback a:active {
+  color: #A4A4A4;
+
+}
+
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 6vh;     
+  text-align: center;
+  gap: 4vh;             
+}
+
+.weee-text {
+  font-size: 72px;
+  font-weight: 700;
+  text-align: center;
+  
+
+  background: linear-gradient(
+    90deg,
+    #ff3cac,
+    #784ba0,
+    #2b86c5,
+    #20e3b2,
+    #ff3cac
+  );
+  background-size: 300% 300%;  
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  animation: gradientShift 5s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#stitch {
+  width: clamp(180px, 50vw, 260px);  
+  height: auto;
+  margin-top: 3vh;                      
+  display: block;
+  animation: stitchSpin 5s ease-out infinite;
+  transform-origin: center center;
+}
+
+#stitch:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+@keyframes stitchSpin {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.emoji-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.emoji {
+  position: absolute;
+  font-size: 32px;
+  opacity: 0;
+  animation: popFloat 10s ease-in-out infinite;
+}
+
+.emoji.e1 {
+  top: 15%;
+  left: 70%;
+  animation-delay: 1s;
+}
+
+.emoji.e2 {
+  top: 70%;
+  left: 15%;
+  animation-delay: 3s;
+}
+
+.emoji.e3 {
+  top: 40%;
+  left: 85%;
+  animation-delay: 5s;
+}
+
+.emoji.e4 {
+  top: 80%;
+  left: 60%;
+  animation-delay: 7s;
+}
+
+.emoji.e5 {
+  top: 25%;
+  left: 30%;
+  animation-delay: 2.5s;
+}
+
+.emoji.e6 {
+  top: 45%;
+  left: 30%;
+  animation-delay: 6.5s;
+}
+
+.emoji.e7 {
+  top: 30%;
+  left: 20%;
+  animation-delay: 1s;
+}
+
+.emoji.e8 {
+  top: 10%;
+  left: 45%;
+  animation-delay: 3s;
+}
+
+.emoji.e9 {
+  top: 80%;
+  left: 55%;
+  animation-delay: 5s;
+}
+
+.emoji.e10 {
+  top: 40%;
+  left: 90%;
+  animation-delay: 7s;
+}
+
+.emoji.e11 {
+  top: 85%;
+  left: 10%;
+  animation-delay: 2.5s;
+}
+
+.emoji.e12 {
+  top: 75%;
+  left: 80%;
+  animation-delay: 6.5s;
+}
+
+@keyframes popFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-25px) scale(1.05);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateY(-40px) scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0);
+  }
+}
+
+.blue-ray {
+  position: fixed;
+  font-size: 28px;
+  font-weight: bold;
+  color: #3f7cff;
+  text-decoration: none;
+  z-index: 5;
+  animation: blueRayBounce 14s linear infinite alternate;
+}
+
+.blue-ray:hover {
+  animation-play-state: paused;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@keyframes blueRayBounce {
+  0% {
+    top: 20%;
+    left: 60%;
+  }
+  25% {
+    top: 60%;
+    left: 15%;
+  }
+  50% {
+    top: 75%;
+    left: 75%;
+  }
+  75% {
+    top: 35%;
+    left: 30%;
+  }
+  100% {
+    top: 10%;
+    left: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 16px 20px;
+  }
+
+  .weee-text {
+    font-size: clamp(24px, 7vw, 36px);
+    text-align: center;
+  }
+}
+
+  .goback {
+    top: 24px;
+    left: 20px;
+  }
+
+  .content {
+    padding-top: 6vh;   
+    margin: 0;
+    gap: 3vh;
+  }
+
+  .title {
+    margin-bottom: 24px;
+    font-size: clamp(12px, 7vw, 22px); 
+}
+
+  .blue-ray {
+    font-size: 20px;
+  }
+
+  .emoji {
+    font-size: 22px;
+  }
+
+
+  #stitch {
+    width: clamp(180px, 50vw, 260px); 
+    height: auto;
+    margin-top: 5vh; 
+  }
+
+  .aboutstitch {
+  font-size: 50px;
+  line-height: 1.4;
+  text-align: left;
+  padding-left: -25px;
+}
