@@ -1,0 +1,28 @@
+
+body {
+  background-color:  rgb(255, 175, 192);
+}
+
+section {
+  display:  flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items:  center;
+  height:  100vh;
+}
+
+.button {
+  padding: 20px 50px;
+  border-radius: 30px;
+  background-color:  rgb(142, 86, 59);
+  color:  rgb(255, 255, 255);
+  font-size:  60px;
+  font-size: 20px;
+  text-align:  center;
+  transition:  all 100ms;
+}
+
+.button:hover {
+  background-color: #000000;
+  cursor:  pointer;
+}

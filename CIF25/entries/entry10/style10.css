@@ -1,0 +1,96 @@
+.goback {
+  font-family: "PPPangramRounded", sans-serif;
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.goback a {
+  color: #A4A4A4;
+  text-decoration: none; 
+}
+
+.goback a:hover {
+  color: #0073E6; 
+  text-decoration: none; 
+}
+
+.goback a:active {
+  color: #A4A4A4;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:  "PPPangramRounded", sans-serif;
+  background-color: #fffdf5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+.week-title {
+  font-family: "PPPangramRounded", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 5px;
+}
+
+.date {
+  font-family: 'Pangram Rounded', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 30px;
+}
+
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.note {
+  width: 150px;
+  height: 150px;
+  background-color: #fef68a;
+  border-radius: 8px;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+/* Color variants for toggling */
+.note.color-1 { background-color: #fef68a; }
+.note.color-2 { background-color: #ffd1dc; }
+.note.color-3 { background-color: #b2f7ef; }
+.note.color-4 { background-color: #ffe5b4; }
+
+@media screen and (max-width: 500px) {
+  .note-grid {
+    grid-template-columns: repeat(2, 120px);
+    gap: 15px;
+  }
+
+  .note {
+    width: 120px;
+    height: 120px;
+  }
+
+  .week-title {
+    font-size: 28px;
+  }
+
+  .date {
+    font-size: 16px;
+  }
+}
