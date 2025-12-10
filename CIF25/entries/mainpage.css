@@ -4,6 +4,23 @@
   box-sizing: border-box;
 }
 
+
+body {
+  cursor: none;
+}
+
+/* emoji cursor */
+#emoji-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  font-size: 32px;      
+  pointer-events: none;   
+  z-index: 9999;           
+}
+
+
 /* Bottom */
 body {
   font-family: "PangramRounded", sans-serif;

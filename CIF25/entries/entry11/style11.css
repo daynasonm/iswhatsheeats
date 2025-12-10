@@ -11,6 +11,30 @@ body {
   background: #ffffff;   /* light blue like your other pages */
 }
 
+.goback {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.goback a {
+  color: #A4A4A4;
+  text-decoration: none; 
+}
+
+.goback a:hover {
+  color: #0073E6; 
+  text-decoration: none; 
+}
+
+.goback a:active {
+  color: #A4A4A4;
+
+}
+
+
 /* Center the book on screen */
 .book-wrapper {
   min-height: 100vh;

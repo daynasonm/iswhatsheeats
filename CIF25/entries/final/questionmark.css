@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.top-left,
+.top-right {
+  font-family: "PangramRounded", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700; /* optional, if you want it bold */
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #ffffff;
+}
+
+
+/* Page wrapper so corners and center are easy to position */
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Corner labels */
+.corner {
+  text-decoration: none;
+  position: absolute;
+  font-size: clamp(18px, 2.5vw, 32px);
+  font-weight: 600;
+  color: #000;
+  z-index: 10;
+}
+
+.corner:hover {
+  text-decoration: none;    
+  color: #808080;            
+  cursor: pointer;
+}
+
+.top-left {
+  top: 24px;
+  left: 32px;
+}
+
+.top-right {
+  top: 24px;
+  right: 32px;
+}
+
+.bottom-left {
+  bottom: 24px;
+  left: 32px;
+  font-size: clamp(14px, 1.6vw, 20px);
+}
+
+.bottom-right {
+  bottom: 24px;
+  right: 32px;
+  font-size: clamp(14px, 1.6vw, 20px);
+}
+
+/* Small screens: keep everything fitting nicely */
+@media (max-width: 768px) {
+  .solar-system {
+    width: 90vw;
+  }
+
+  .planet-small  { width: 18vw; max-width: 90px; }
+  .planet-medium { width: 22vw; max-width: 110px; }
+  .planet-large  { width: 26vw; max-width: 130px; }
+}
