@@ -1,140 +1,61 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #fff;
-}
-
-@font-face {
-  font-family: "PangramRounded";
-  src: url("pangramrounded/PPPangramSansRounded-Bold.otf") format("opentype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-/* corners (you already had these) */
-.corner {
-  position: absolute;
-  font-size: clamp(18px, 2.5vw, 32px);
-  font-weight: 600;
-  color: #000;
-  z-index: 10;
-  text-decoration: none;
-}
-.top-left  { top: 24px; left: 32px; }
-.top-right { top: 24px; right: 32px; }
-.bottom-left  { bottom: 24px; left: 32px; font-size: clamp(14px,1.6vw,20px); }
-.bottom-right { bottom: 24px; right: 32px; font-size: clamp(14px,1.6vw,20px); }
-
-/* hover colour only for YAWYE, ?, D/N */
-.top-left:hover,
-.top-right:hover,
-.bottom-left:hover {
-  color: #888;
-}
-
-/* center wrapper */
-.page {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-.solar-wrapper {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.solar-system {
-  position: relative;
-  width: min(60vw, 750px);
-  aspect-ratio: 1 / 1;
-}
-
-/* RINGS – match your HTML: ring ring-1/2/3 */
-.ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  border: 3px solid #000;
-  transform: translate(-50%, -50%);
-}
-
-/* inner, middle, outer ring sizes */
-.ring-1 { width: 40%; height: 40%; }  /* inner */
-.ring-2 { width: 68%; height: 68%; }  /* middle */
-.ring-3 { width: 94%; height: 94%; }  /* outer */
-
-/* TRACKS – invisible circles that rotate */
+/* Base track: rotates, all others inherit this then override width/height/angle */
 .track {
   position: absolute;
   top: 50%;
   left: 50%;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
   transform-origin: center center;
+  animation: orbitSpin 40s linear infinite;
 }
 
-/* put some tracks on each ring */
-.track-inner  { width: 40%; height: 40%; }  /* same as ring-1 */
-.track-middle { width: 68%; height: 68%; }  /* same as ring-2 */
-.track-outer  { width: 94%; height: 94%; }  /* same as ring-3 */
-
-
-/* planet position: start at top of its track */
-.planet {
-  position: absolute;
-  top: -50%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  cursor: default;
+/* each track has its own radius AND starting angle */
+.track-1 {
+  width: 40%;                /* inner-ish */
+  height: 40%;
+  transform: translate(-50%, -50%) rotate(0deg);
 }
 
-.planet img {
-  display: block;
+.track-2 {
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.track-3 {
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.track-4 {
+  width: 70%;
+  height: 70%;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.track-5 {
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.track-6 {
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.track-7 {
   width: 100%;
-  height: auto;
+  height: 100%;
+  transform: translate(-50%, -50%) rotate(270deg);
 }
 
-/* planet sizes */
-.planet-small  { width: 8vw;  max-width: 90px; }
-.planet-medium { width: 10vw; max-width: 120px; }
-.planet-large  { width: 13vw; max-width: 150px; }
-
-/* hover label in middle of planet */
-.planet-label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(10px, 1.2vw, 14px);
-  color: #fff;
-  white-space: nowrap;
-  text-shadow: 0 0 5px rgba(0,0,0,0.6);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-}
-.planet:hover .planet-label {
-  opacity: 1;
+.track-8 {
+  width: 110%;
+  height: 110%;
+  transform: translate(-50%, -50%) rotate(315deg);
 }
 
-/* responsive tweak */
-@media (max-width: 768px) {
-  .solar-system { width: 90vw; }
-
-  .planet-small  { width: 18vw; max-width: 90px; }
-  .planet-medium { width: 22vw; max-width: 110px; }
-  .planet-large  { width: 26vw; max-width: 130px; }
-}
+/* if you have more planets, keep increasing radius a bit and
+   change the rotate(...) angle so they start in different spots */
