@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Pangram SemiBold for top corners */
+@font-face {
+  font-family: "PangramRoundedSemi";
+  src: url("pangramrounded/PPPangramSansRounded-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ABC Monument Grotesk for bottom corners (update path to your file) */
+@font-face {
+  font-family: "ABCMonumentGrotesk";
+  src: url("fonts/ABCMonumentGrotesk-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #ffffff;
+  font-family: "ABCMonumentGrotesk", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+/* whole page */
+.page {
+  position: relative;
+  min-height: 100vh;
+  padding: 32px 40px 32px 32px;
+}
+
+/* corners */
+.corner {
+  position: absolute;
+  color: #000;
+}
+
+/* YAWYE. */
+.top-left {
+  top: 24px;
+  left: 32px;
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* D/N + 2025 */
+.bottom-left,
+.bottom-right {
+  bottom: 24px;
+  font-size: clamp(12px, 1.3vw, 16px);
+  font-weight: 400;
+}
+
+.bottom-left {
+  left: 32px;
+}
+
+.bottom-right {
+  right: 32px;
+}
+
+/* main text block */
+.intro {
+  max-width: 60rem;
+  margin-top: 140px;   /* distance under YAWYE. */
+  margin-left: 24px;
+}
+
+.about-text {
+  font-size: clamp(20px, 2.3vw, 32px);
+  line-height: 1.16;
+  color: #000;
+}
+
+/* grey “You Are What You Eat.” */
+.about-highlight {
+  color: #9f9f9f;
+}
+
+/* mobile tweaks */
+@media (max-width: 768px) {
+  .page {
+    padding: 24px 20px;
+  }
+
+  .top-left {
+    top: 18px;
+    left: 20px;
+  }
+
+  .intro {
+    margin-top: 110px;
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  .about-text {
+    font-size: clamp(18px, 5vw, 24px);
+    line-height: 1.22;
+  }
+}
